@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createClient } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function ManageQuestionSetsPage() {
-  const supabase = createClient();
+
   const router = useRouter();
   const [questionSets, setQuestionSets] = useState([]);
   const [newSetName, setNewSetName] = useState('');

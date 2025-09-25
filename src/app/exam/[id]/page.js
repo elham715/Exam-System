@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { createClient } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import { useParams, useRouter } from 'next/navigation';
 import { BlockMath } from 'react-katex';
 import Link from 'next/link';
 
 export default function ExamPage() {
-  const supabase = createClient();
+
   const router = useRouter();
   const { id: examId } = useParams();
 

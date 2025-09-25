@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { createClient } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 
 export default function ResultsPage() {
-  const supabase = createClient();
+
   const { id: studentExamId } = useParams();
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(true);

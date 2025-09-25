@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createClient } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import Link from 'next/link';
 
 export default function ManageExamsPage() {
-  const supabase = createClient();
+
   const [exams, setExams] = useState([]);
   const [copiedLink, setCopiedLink] = useState('');
 

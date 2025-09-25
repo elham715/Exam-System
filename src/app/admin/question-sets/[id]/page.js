@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { createClient } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import { useParams } from 'next/navigation';
 import { BlockMath } from 'react-katex';
 import Link from 'next/link';
 
 export default function EditQuestionSetPage() {
-  const supabase = createClient();
+
   const { id: questionSetId } = useParams();
 
   const [questionSet, setQuestionSet] = useState(null);

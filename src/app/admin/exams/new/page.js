@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createClient } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 
 export default function NewExamPage() {
-  const supabase = createClient();
+
   const router = useRouter();
   const [title, setTitle] = useState('');
   const [duration, setDuration] = useState(60);
